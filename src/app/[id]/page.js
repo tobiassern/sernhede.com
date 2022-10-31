@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 
 async function fetchPost(params) {
 
-  const res = await fetch(`https://dummyjson.com/posts/${params.id}`, { next: { revalidate: 60 } });
+  const res = await fetch(`https://dummyjson.com/posts/${params.id}`);
   const data = await res.json();
 
 
